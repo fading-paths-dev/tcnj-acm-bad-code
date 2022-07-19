@@ -1,5 +1,5 @@
 # from random import shuffle
-
+#
 # def the_stuff():
 #     a = 10
 #     y = []
@@ -57,4 +57,4 @@ def generate_random_alphabet():
 
 result = generate_random_alphabet()
 for i in range(len(result)):
-        print(result[i], end='')
+    print(result[i], end='')
