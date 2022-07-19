@@ -46,8 +46,15 @@
 
 from random import sample
 import string
-alphabet = string.ascii_lowercase
-mixed_alphabet = sample(alphabet, len(alphabet))
 
-for i in range(len(mixed_alphabet)):
-    print(mixed_alphabet[i], end='')
+
+def generate_random_alphabet():
+    alphabet = string.ascii_lowercase
+    mixed_alphabet = sample(alphabet, len(alphabet))
+
+    return mixed_alphabet
+
+
+result = generate_random_alphabet()
+for i in range(len(result)):
+        print(result[i], end='')
