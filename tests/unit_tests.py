@@ -1,7 +1,8 @@
 import string
-from bad import generate_random_alphabet
+from bad import generate_random_alphabet, output_alphabet_as_a_string
 from hamcrest import assert_that, equal_to
 from unittest import TestCase
+from unittest.mock import patch
 
 ALPHABET_LENGTH = 26
 
@@ -31,3 +32,11 @@ class TestBadCode(TestCase):
                 if result[i] == alphabet[p]:
                     test[p] += 1
         assert_that(test, equal_to(compare))
+
+    @patch('builtins.print')
+    def test_output_print_called_for_each_element(self, mock_print):
+        result = ["a"] * ALPHABET_LENGTH
+        output_alphabet_as_a_string(result)
+        mock_print.assert_called_with('aaaaaaaaaaaaaaaaaaaaaaaaaa')
+
+

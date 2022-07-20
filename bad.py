@@ -55,6 +55,9 @@ def generate_random_alphabet():
     return mixed_alphabet
 
 
+def output_alphabet_as_a_string(alphabet):
+    print(''.join(alphabet))
+
+
 result = generate_random_alphabet()
-for i in range(len(result)):
-    print(result[i], end='')
+output_alphabet_as_a_string(result)
