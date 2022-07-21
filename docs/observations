@@ -1,0 +1,44 @@
+- Readme specifies usage as running bad.py, not accessing internal functions
+- Outputs from testing old_bad.py as a black box function show key parameters are:
+    -length = 26 characters
+    -all characters are lowercase
+    -each character appears only once
+    -the characters are the english alphabet
+    -the output is printed to the terminal
+    -the output is printed as a continuous string, not a list or tuple etc
+
+/////////////////////////////////////////////////////////////////////
+
+Output comparison
+
+old_bad.py
+"C:\Users\Kathryn.Whitehead\OneDrive - Apollo Fire Detectors Ltd\Documents\GitHub\tcnj-acm-bad-code\venv\Scripts\python.exe" "C:/Users/Kathryn.Whitehead/OneDrive - Apollo Fire Detectors Ltd/Documents/GitHub/tcnj-acm-bad-code/old_bad.py"
+pkydrfgsiamzjvbonulteqhxwc
+
+Process finished with exit code 0
+
+bay.py
+"C:\Users\Kathryn.Whitehead\OneDrive - Apollo Fire Detectors Ltd\Documents\GitHub\tcnj-acm-bad-code\venv\Scripts\python.exe" "C:/Users/Kathryn.Whitehead/OneDrive - Apollo Fire Detectors Ltd/Documents/GitHub/tcnj-acm-bad-code/bad.py"
+lbhyrpaksvdnfgzouiwqcjxmet
+
+Process finished with exit code 0
+
+/////////////////////////////////////////////////////////////////////
+Unit test results for bad.py after refactoring
+
+"C:\Users\Kathryn.Whitehead\OneDrive - Apollo Fire Detectors Ltd\Documents\GitHub\tcnj-acm-bad-code\venv\Scripts\python.exe" "C:\Program Files (x86)\JetBrains\PyCharm Community Edition 2021.2.3\plugins\python-ce\helpers\pycharm\_jb_pytest_runner.py" --path "C:/Users/Kathryn.Whitehead/OneDrive - Apollo Fire Detectors Ltd/Documents/GitHub/tcnj-acm-bad-code/tests/unit_tests.py"
+Testing started at 08:40 ...
+Launching pytest with arguments C:/Users/Kathryn.Whitehead/OneDrive - Apollo Fire Detectors Ltd/Documents/GitHub/tcnj-acm-bad-code/tests/unit_tests.py --no-header --no-summary -q in C:\Users\Kathryn.Whitehead\OneDrive - Apollo Fire Detectors Ltd\Documents\GitHub\tcnj-acm-bad-code\tests
+
+============================= test session starts =============================
+collecting ... collected 4 items
+
+unit_tests.py::TestBadCode::test_output_contents_contain_every_letter PASSED [ 25%]
+unit_tests.py::TestBadCode::test_output_contents_do_not_repeat PASSED    [ 50%]
+unit_tests.py::TestBadCode::test_output_length PASSED                    [ 75%]
+unit_tests.py::TestBadCode::test_output_print_continuous PASSED          [100%]
+
+============================== 4 passed in 0.06s ==============================
+
+Process finished with exit code 0
+
